@@ -1,0 +1,23 @@
+.sec-box{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.detil-container{
+    position: relative;
+    width: 50%;
+    max-width: 550px;
+    margin: 10% auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+}
+.Info-Container{
+    color: black;
+    background:transparent;
+}

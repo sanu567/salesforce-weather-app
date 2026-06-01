@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Create Account">
+        <lightning-input label="Company name" name="Name" onchange={handleName}></lightning-input>
+        <lightning-button label="Conform" onclick={DisplayCompanyName}></lightning-button>
+        <template if:true={showCompany}>
+            <p>{accountName}</p>
+            <lightning-button label="Create" onclick={createAccount} ></lightning-button>
+        </template>
+    </lightning-card>
+</template>

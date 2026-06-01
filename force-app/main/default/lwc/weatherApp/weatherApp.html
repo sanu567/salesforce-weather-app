@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Weather Details">
+        <template if:true={DisplayWeather}>
+         <div>
+            <p>City:{city}</p>
+            <p>Temp:{temp}°C ,{tempF} °F </p>
+            <p>Wind Speed:{wind}mph</p>
+        </div>
+       </template>
+        <lightning-button onclick={showWeather} label="Show Weather"></lightning-button>
+    </lightning-card>
+</template>

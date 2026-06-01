@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Craete Record Using RecordUi">
+        <lightning-input  label="First Name"  name="FirstName" onchange={handleInput}></lightning-input>
+        <lightning-input label="Last Name"   name="LastName" onchange={handleInput}></lightning-input>
+        <lightning-input label="Email"  name="Email" onchange={handleInput}></lightning-input>
+
+        <lightning-button label="Create" onclick={createContact}></lightning-button>
+    </lightning-card>
+</template>

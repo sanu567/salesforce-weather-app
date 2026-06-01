@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="DashBoard Componenet" icon-name="custom:custom63">
+        <div class="dashboard-contanier">
+            <div class="dash-card">
+                <div class="dash-title">Total order</div>
+                <div class="dash-value">{totalorder}</div>
+            </div>
+
+            <div class="dash-card">
+                <div class="dash-title">Active Machines</div>
+                <div class="dash-value">{activeMachines}</div>
+            </div>
+
+            <div class="dash-card">
+                <div class="dash-title">Efficiency</div>
+                <div class="dash-value">{efficiency}%</div>
+            </div>
+
+            <div class="dash-card">
+                <div class="dash-title">Open Tickets</div>
+                <div class="dash-value">{openTickets}</div>
+            </div>
+        </div>
+        
+        <div class="table-section">
+            <lightning-datatable data={data} columns={columns} key-field="Id" hide-checkbox-column></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

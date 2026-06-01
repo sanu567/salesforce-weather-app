@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="User Details">
+        <lightning-button label="Show Details" onclick={handleShowDetails}></lightning-button>
+
+            <template if:true={showModel}>
+                <section role="dialog" class="sec-box">
+                 <div class="detil-container">
+                    <h2>User Information</h2>
+                 <div class="Info-Container">
+                      <p>Name:{user.Name}</p>
+                      <p>Email:{user.Email}</p>
+                      <p>UserName:{user.Username}</p>
+                </div>
+                <lightning-button label="Close" onclick={handleClose}></lightning-button>
+                </div>
+                </section>
+            </template>
+    </lightning-card>
+</template>

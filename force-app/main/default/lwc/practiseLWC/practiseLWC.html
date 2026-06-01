@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title="LWC">
+    <div style="padding: 10px; border: 1px solid blanchedalmond">
+      <h2>Simple Counter</h2>
+      <p>Count: {count}</p>
+
+      <lightning-button label="Increase" onclick={handleIncrement}></lightning-button>
+      <lightning-button label="Decrease" onclick={handleDecrement}></lightning-button>
+    </div>
+    <lightning-input type="text" label="Enter the value" onchange={TakeInput}></lightning-input>
+  </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Create Machinery">
+
+        <div>
+
+          <lightning-input label="Machine Name" value={machineName} onchange={handleMachineName}></lightning-input>
+          <lightning-input label="Operator Name" value={operatorName} onchange={handleOperatorName}></lightning-input>
+          <lightning-input label="Production Count" type="number" value={productionCount} onchange={handleProductioncount}></lightning-input>
+          <lightning-combobox label="Status" value={status} options={statusOption} onchange={handleStatus}></lightning-combobox>
+           <lightning-input type="date" label="Production Date" value={productionDate} onchange={handleDateChange}></lightning-input>   
+          <div>
+             <lightning-button label="Save" variant="brand" onclick={handleSave}></lightning-button>
+             <lightning-button label="Cancel" variant="neutral" onclick={handleCancel}></lightning-button>
+          </div>
+
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Parent component">
+         <template if:true={ReciveData}></template><p>{dataMsg}</p>
+    <template if:true={showchlid}>
+<c-pto-c-child-component onhide={hideChildButton} onsenddata={handleData} ></c-pto-c-child-component>
+    </template>
+    
+    </lightning-card>
+</template>

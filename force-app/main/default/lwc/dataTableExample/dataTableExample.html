@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Opportunity DataTable with scolling">
+        <div style="height: 250px;">
+            <lightning-datatable data={data} columns={columns} key-field="Id" enable-infinite-loading onloadmore={loadmore} 
+            lwc:ref="datatable"
+            is-loading={isLoading}></lightning-datatable>
+        </div>
+
+        <div if:true={loadMoreStatus}>
+            {loadMoreStatus}
+            <lightning-button label="Go top" onclick={scrollTop}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
