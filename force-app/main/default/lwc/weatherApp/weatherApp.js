@@ -1,4 +1,4 @@
-import { LightningElement,wire } from 'lwc';
+import { LightningElement} from 'lwc';
 import getWeather from '@salesforce/apex/weatherApp.getWeather';
 export default class WeatherApp extends LightningElement {
     city;
@@ -6,22 +6,27 @@ export default class WeatherApp extends LightningElement {
     tempF;
     wind;
     DisplayWeather=false;
-
-    @wire(getWeather)
-    weatherResult({data,error}){
-         if(data){
-            const result=JSON.parse(data);
-            this.city = result.location.name;
-            this.temp=result.current.temp_c;
-            this.tempF=result.current.temp_f;
-            this.wind=result.current.wind_mph;
-        }
-        else if(error){
-            console.log(error);
-        }
-       }
+    inputcityName='';
+    
+    takeCityName(event){
+        this.inputcityName = event.target.value;
+    }
 
        showWeather(){
-        this.DisplayWeather=true;
+        getWeather({ cityName: this.inputcityName })
+            .then(result => {
+
+                const data = JSON.parse(result);
+
+                this.city = data.location.name;
+                this.temp = data.current.temp_c;
+                this.tempF = data.current.temp_f;
+                this.wind = data.current.wind_mph;
+
+                this.DisplayWeather = true;
+            })
+            .catch(error => {
+                console.error(error);
+            });
        }
 }

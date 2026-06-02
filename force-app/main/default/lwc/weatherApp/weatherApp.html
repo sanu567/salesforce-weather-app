@@ -1,5 +1,6 @@
 <template>
     <lightning-card title="Weather Details">
+        <lightning-input label="Enter city Name" onchange={takeCityName}></lightning-input>
         <template if:true={DisplayWeather}>
          <div>
             <p>City:{city}</p>
